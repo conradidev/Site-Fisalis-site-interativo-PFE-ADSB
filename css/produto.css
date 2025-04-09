@@ -1,0 +1,177 @@
+/* Container para a grade de produtos */
+#produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Card de produto estilo polaroid */
+.produto-card {
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 240px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Efeito de hover */
+.produto-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do produto */
+.produto-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Informações do produto */
+.produto-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.produto-info h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.produto-info h3 {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.produto-info p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.produto-info span {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Botão de adicionar ao carrinho */
+.produto-info button {
+  background-color: #f1fa6e;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+
+.produto-info button:hover {
+  background-color: #c0ca2e;
+}
+
+/* Responsivo para tablets */
+@media screen and (max-width: 1024px) {
+  #produtos {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .produto-card {
+    width: 200px;
+  }
+
+  .produto-card img {
+    height: 200px;
+  }
+
+  .produto-info h2 {
+    font-size: 1rem;
+  }
+
+  .produto-info p {
+    font-size: 0.95rem;
+  }
+
+  .produto-info button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Responsivo para celulares grandes */
+@media screen and (max-width: 768px) {
+  #produtos {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .produto-card {
+    width: 45%;
+  }
+
+  .produto-card img {
+    height: 180px;
+  }
+
+  .produto-info h2 {
+    font-size: 0.95rem;
+  }
+
+  .produto-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .produto-info p {
+    font-size: 0.9rem;
+  }
+
+  .produto-info button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsivo para celulares pequenos */
+@media screen and (max-width: 480px) {
+  .produto-card {
+    width: 100%;
+  }
+
+  .produto-card img {
+    height: 160px;
+  }
+
+  .produto-info {
+    padding: 0.8rem;
+  }
+
+  .produto-info h2 {
+    font-size: 0.9rem;
+  }
+
+  .produto-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .produto-info p {
+    font-size: 0.85rem;
+  }
+
+  .produto-info button {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
+
+

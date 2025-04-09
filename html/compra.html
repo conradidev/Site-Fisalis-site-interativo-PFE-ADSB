@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/compra.css" />
+  <link rel="stylesheet" href="../css/responsivo.css">
+
+</head>
+<body>
+    <div class="container">
+      <h1>Finalizar Compra</h1>
+      <form class="checkout-form">
+        <section>
+          <h2>Informações Pessoais</h2>
+          <div class="grid-3">
+            <label>Nome completo
+              <input type="text" name="nome" placeholder="Seu nome completo" />
+            </label>
+            <label>E-mail
+              <input type="email" name="email" placeholder="seu@email.com" />
+            </label>
+            <label>Telefone
+              <input type="tel" name="telefone" placeholder="(00) 00000-0000" />
+            </label>
+          </div>
+        </section>
+  
+        <section>
+          <h2>Endereço de Entrega</h2>
+          <div class="grid-3">
+            <label>CEP
+              <input type="text" name="cep" placeholder="00000-000" />
+            </label>
+            <label>Rua
+              <input type="text" name="rua" placeholder="Nome da rua" />
+            </label>
+            <label>Número
+              <input type="text" name="numero" placeholder="123" />
+            </label>
+          </div>
+          <div class="grid-3">
+            <label>Complemento
+              <input type="text" name="complemento" placeholder="Apartamento, bloco, etc." />
+            </label>
+            <label>Cidade
+              <input type="text" name="cidade" placeholder="Sua cidade" />
+            </label>
+            <label>Estado
+              <input type="text" name="estado" placeholder="UF" />
+            </label>
+          </div>
+        </section>
+  
+        <button type="submit">Continuar para o pagamento</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.querySelector(".checkout-form");
+    
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Evita envio automático
+    
+        const nome = form.nome.value.trim();
+        const email = form.email.value.trim();
+        const telefone = form.telefone.value.trim();
+        const cep = form.cep.value.trim();
+        const rua = form.rua.value.trim();
+        const numero = form.numero.value.trim();
+        const complemento = form.complemento.value.trim();
+        const cidade = form.cidade.value.trim();
+        const estado = form.estado.value.trim();
+    
+        // Regex para validar email, telefone e CEP
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const telefoneRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+        const cepRegex = /^\d{5}-?\d{3}$/;
+    
+        // Validações básicas
+        if (!nome || !email || !telefone || !cep || !rua || !numero || !cidade || !estado) {
+          alert("Por favor, preencha todos os campos obrigatórios.");
+          return;
+        }
+    
+        if (!emailRegex.test(email)) {
+          alert("Por favor, insira um e-mail válido.");
+          return;
+        }
+    
+        if (!telefoneRegex.test(telefone)) {
+          alert("Por favor, insira um telefone válido. Ex: (11) 91234-5678");
+          return;
+        }
+    
+        if (!cepRegex.test(cep)) {
+          alert("Por favor, insira um CEP válido. Ex: 12345-678");
+          return;
+        }
+    
+        // Se tudo estiver ok
+        alert("Dados validados com sucesso! Redirecionando para o pagamento...");
+        // Aqui você pode redirecionar ou enviar os dados
+        window.location.href = "../html/pix.html";
+      });
+    </script>
+    
+  </body>
+  </html>
+  
