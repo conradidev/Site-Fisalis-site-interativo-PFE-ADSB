@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README.md
 
 ## Tema do Site
@@ -70,3 +71,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   - Simulação de fluxo de pagamento e timer;
 
 Embora muitas funcionalidades tenham sido desenvolvidas com base no conteúdo das aulas, *houve ampla pesquisa externa* para implementar efeitos visuais, comportamentos e simulações mais complexas. O aprendizado foi contínuo durante o processo, exigindo entendimento de novas abordagens e soluções para tornar a aplicação funcional e agradável.
+=======
+# Site-Fisalis-site-interativo-PFE-ADSB
+Site interativo, feito para a matéria de desenvolvimento front-end 
+>>>>>>> d11015cfdafe2e8d4f663045bf2fe1a619dcf42e
