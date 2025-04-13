@@ -1,77 +1,113 @@
-<<<<<<< HEAD
-# README.md
+# ♻️ Brechó Online — Moda Renovável
 
-## Tema do Site
+Projeto de e-commerce de roupas usadas, com a proposta de um brechó moderno e acessível. O objetivo é promover a **moda renovável**, incentivando o consumo consciente e a reutilização de peças, gerando impacto positivo tanto no bolso dos consumidores quanto no meio ambiente.
 
-O projeto desenvolvido é um *e-commerce de roupas usadas, com a proposta de um brechó moderno e acessível. O objetivo central é promover a **moda renovável*, encorajando o consumo consciente e a reutilização de peças, com impacto positivo tanto no bolso das consumidoras quanto no meio ambiente. O brechó físico coleta roupas diretamente de clientes, que são então disponibilizadas para venda através da plataforma digital.
+---
 
-A proposta estética e funcional do site gira em torno do conceito de que *as mulheres têm liberdade para se vestir de acordo com o que sentem no momento. Por isso, as coleções do site representam diferentes moods e estilos de vida: desde o conforto do look casual até a sofisticação do corporativo, passando pela leveza da praia ou da natureza no campo. O site foi projetado para ser **mutável*, com flexibilidade para adicionar novas coleções e categorias de produtos conforme a necessidade.
+## 🧭 Sobre o Projeto
 
-## Estrutura do Site
+Este site simula a experiência de compra em um brechó online. As peças são coletadas presencialmente com clientes e disponibilizadas na plataforma digital.
 
-O site é composto por diferentes páginas, com destaque para a *página inicial (home)*, que reúne os principais elementos da experiência do usuário:
+A estética e estrutura refletem o conceito de que **as mulheres têm liberdade para se vestir de acordo com o que sentem**. As coleções representam diferentes moods e estilos de vida: do casual ao corporativo, do campo à praia.
 
-- *Header*: contém a logo (clicável, redirecionando à home) e um menu de navegação com dropdowns, divididos em:
-  - *Produtos*: por tipo (Roupas, Bolsas, Sapatos etc.)
-  - *Coleções*: por estilo (Casual, Corporativo, Praia, Campo)
-  - *Ícone de Carrinho: localizado no canto direito, redireciona para a **página do carrinho de compras*, onde o usuário pode visualizar os itens adicionados.
+---
 
-- *Carrossel (banner)*: apresenta imagens grandes com links que redirecionam para a página de produtos filtrada pela coleção selecionada.
+## 🖼️ Estrutura do Site
 
-- *Grade de Produtos*: mostra todos os produtos disponíveis. Cada produto possui botões para:
-  - *Adicionar ao Carrinho*
-  - *Ver Similares* (redireciona para outros produtos da mesma *categoria*, e não da mesma coleção).
+### 📌 Página Inicial (Home)
 
-- *Vídeo de respiro*: adiciona movimento e reforça a estética da marca.
+- **Header:** logotipo clicável + menu com dropdowns:
+  - **Produtos:** Roupas, Bolsas, Sapatos, etc.
+  - **Coleções:** Casual, Corporativo, Praia, Campo
+- **Ícone de Carrinho:** acesso rápido à página do carrinho
+- **Carrossel/Banner:** destaques clicáveis por coleção
+- **Grade de Produtos:** exibição de todos os itens com botões de:
+  - Adicionar ao Carrinho
+  - Ver Similares (por categoria)
+- **Vídeo de respiro:** reforça a identidade da marca
+- **Newsletter:** layout com convite ao cadastro (não funcional)
+- **Rodapé:** elementos visuais, créditos e referências
 
-- *Newsletter*: presente em duas seções, para convidar o usuário a assinar, mas ainda não funcional (não envia dados).
+### 🛒 Página do Carrinho
 
-- *Footer*: possui apelo visual, com links e créditos. Embora os botões não estejam ainda ativos, ele já indica o uso de imagens de bancos gratuitos e referência visual da identidade do projeto.
+- Lista de itens adicionados com suas informações
+- Cálculo automático do total da compra
+- Manipulação dinâmica via JavaScript
 
-## Página do Carrinho
+### 🛍️ Página de Produtos
 
-A página do carrinho exibe os itens adicionados pelo usuário, com suas respectivas *informações e valores. Todos os produtos são **instanciados e manipulados dinamicamente por meio de JavaScript, garantindo que os dados apresentados estejam atualizados com base na interação do usuário. O carrinho **calcula automaticamente o valor total da compra* com base nos produtos adicionados.
+- Produtos exibidos conforme o caminho de acesso:
+  - Por **categoria** (menu ou "ver similares")
+  - Por **coleção** (banner ou menu suspenso)
+- Opção de adicionar ao carrinho
 
-## Página de Produtos
+### 🧾 Página de Checkout
 
-A página de produtos tem como função exibir os itens filtrados de acordo com o caminho que o usuário utilizou para chegar até ela:
+- Formulário de dados pessoais e de entrega
+- Validação dos campos via JavaScript
 
-- Se o usuário acessou por meio do *dropdown de categorias* ou clicou em *"ver similares"* na home, os produtos exibidos são filtrados por *categoria* (por exemplo, todos os sapatos, bolsas ou roupas).
-- Se o usuário clicou no *carrossel/banner inicial* ou acessou por meio do dropdown de *coleções, os produtos são filtrados por **coleção* (como Praia, Campo, Corporativo, etc.).
+### 💸 Página de Pagamento (Pix)
 
-Nessa página também é possível *adicionar produtos ao carrinho*, mas não há a opção de ver similares, pois o foco está na exibição filtrada específica conforme a navegação do usuário.
+- Simulação de pagamento via QR Code fictício
+- Contador regressivo de 1 minuto
+- Botão “Já paguei” para finalizar o fluxo
 
-## Página de Checkout
+### ✅ Página de Sucesso
 
-Após o usuário seguir para a etapa seguinte no carrinho, ele é redirecionado para a *página de checkout, onde deve preencher um **formulário com dados pessoais e informações de entrega. Essa página realiza **validações em JavaScript* para garantir que os campos obrigatórios estejam preenchidos corretamente antes de permitir o envio. Essa etapa é fundamental para simular uma compra real e preparar os dados para a finalização do pedido.
+- Mensagem de finalização de compra
+- Código de rastreio fictício + aviso de nota fiscal
 
-## Página de Pagamento (Pix)
+---
 
-Após o preenchimento do formulário de checkout, o usuário é direcionado para a *página de pagamento, onde é apresentada uma simulação de pagamento via **Pix. O sistema exibe um QR Code fictício apenas para **ilustrar a experiência real de pagamento*.
+## 🧰 Tecnologias Utilizadas
 
-A página possui um contador regressivo de *1 minuto, inspirado em plataformas reais que expiram o código Pix após determinado tempo. A ideia é didática: **incentivar o clique no botão "Já paguei"* para simular a finalização da compra. Apesar de não haver integração real com sistemas de pagamento, a página cumpre o papel de representar essa etapa da jornada de forma funcional e visualmente coerente com o restante do projeto.
+- **HTML:** estruturação das páginas
+- **CSS:** estilização, responsividade e animações
+- **JavaScript:**
+  - Manipulação do DOM
+  - Filtros por categoria/coleção
+  - Validação de formulários
+  - Controle dinâmico do carrinho
+  - Simulação de pagamento com timer
 
-## Página de Sucesso (Finalização)
+> Algumas funcionalidades foram além do conteúdo abordado em aula, exigindo pesquisas externas e aplicação prática de novos conhecimentos.
 
-A última página do site é a *página de sucesso, que confirma ao usuário que a compra foi finalizada com sucesso. Nela, uma mensagem informa que a **nota fiscal será enviada por e-mail* e um *código fictício de rastreio* é exibido para simular o acompanhamento do pedido pelos Correios.
+---
 
-Essa etapa tem como objetivo *aumentar a imersão e o realismo da experiência*, encerrando o fluxo de compra de maneira clara e satisfatória para o usuário.
+## 🚀 Como Rodar o Projeto Localmente
 
-## Tecnologias Utilizadas
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/Site-Fisalis-site-interativo-PFE-ADSB.git
 
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+# Acesse a pasta
+cd Site-Fisalis-site-interativo-PFE-ADSB
 
-- *HTML*: estruturação das páginas e componentes do site;
-- *CSS*: estilização, responsividade, animações e aparência geral do projeto;
-- *JavaScript*: 
-  - Manipulação do DOM;
-  - Validação de formulários;
-  - Filtros e buscas por categoria e coleção;
-  - Criação e manipulação dinâmica dos produtos e carrinho de compras;
-  - Simulação de fluxo de pagamento e timer;
+# Abra o arquivo index.html no navegador
+```
 
-Embora muitas funcionalidades tenham sido desenvolvidas com base no conteúdo das aulas, *houve ampla pesquisa externa* para implementar efeitos visuais, comportamentos e simulações mais complexas. O aprendizado foi contínuo durante o processo, exigindo entendimento de novas abordagens e soluções para tornar a aplicação funcional e agradável.
-=======
-# Site-Fisalis-site-interativo-PFE-ADSB
-Site interativo, feito para a matéria de desenvolvimento front-end 
->>>>>>> d11015cfdafe2e8d4f663045bf2fe1a619dcf42e
+> *Este projeto não utiliza backend ou banco de dados — tudo é feito no front-end.*
+
+---
+
+## 🙋‍♀️ Como Contribuir
+
+1. Fork este repositório
+2. Crie uma branch: `git checkout -b sua-feature`
+3. Faça suas alterações e dê commit: `git commit -m 'Minha contribuição'`
+4. Push na sua branch: `git push origin sua-feature`
+5. Abra um Pull Request
+
+---
+
+## 📌 Status do Projeto
+
+✅ Finalizado (simulação completa de fluxo de compra, sem integração real com APIs de pagamento ou back-end).
+
+---
+
+## 📄 Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+
+---
