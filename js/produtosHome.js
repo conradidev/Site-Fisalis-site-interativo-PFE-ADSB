@@ -6,7 +6,7 @@ const produtosLimitados = produtos.slice(0, 20);
 
 // Função que redireciona para a página de produtos filtrando por categoria
 function verSimilares(categoria) {
-  window.location.href = `produtos.html?categoria=${categoria}`;
+  window.location.href = `/html/produtos.html?categoria=${categoria}`;
 }
 
 // Percorre os produtos limitados e cria os cards
