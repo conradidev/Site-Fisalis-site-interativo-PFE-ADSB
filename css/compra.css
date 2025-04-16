@@ -1,0 +1,89 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Container da página */
+  .container {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Títulos */
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #555;
+  }
+  
+  /* Formulário */
+  .checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  input {
+    margin-top: 0.4rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #c77dff;
+  }
+  
+  /* Botão */
+  button {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f1fa6e;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d0db35;
+  }

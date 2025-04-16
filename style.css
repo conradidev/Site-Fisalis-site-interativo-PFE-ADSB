@@ -1,0 +1,457 @@
+/* home.css */
+
+/* Paleta de cores para todo o site */
+:root {
+    --background: #ffffff;               /* Cor de fundo principal */
+    --headline: #fffffe;                /* Cor para títulos (h1, h2) */
+    --paragraph: #abd1c6;               /* Cor de parágrafos */
+    --button: #f9bc60;                  /* Cor de fundo dos botões */
+    --button-text: #001e1d;             /* Cor do texto dos botões */
+    --illustration-stroke: #001e1d;     /* Cor para contornos/ícones */
+    --illustration-main: #e8e4e6;       /* Cor de fundo auxiliar */
+    --highlight: #f9bc60;               /* Cor para destaque (ex: banner) */
+    --secondary: #abd1c6;               /* Cor secundária */
+    --tertiary: #e16162;                /* Cor de hover/erro */
+}
+
+body {
+    margin: 0;                          /* Remove margem padrão */
+    font-family: 'Arial', sans-serif;  /* Define fonte principal */
+    background-color: var(--background); /* Cor de fundo definida na root */
+    color: var(--paragraph);           /* Cor padrão do texto */
+}
+
+section{
+  padding: 10px 0px 10px 0px;
+}
+
+
+/* Video-inicio */
+.video-respiro {
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* ou qualquer cor de fundo */
+}
+
+.video-respiro video {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Categorias */
+
+.categorias{
+  padding: 0px;
+}
+.categorias .content{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.carrossel-categorias {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.card {
+ min-width: 100%;
+ display: flex;
+}
+
+.slide{
+  background-size:cover; /* ou contain dependendo do efeito desejado */
+  background-position: center; 
+  object-fit: contain;
+  background-repeat: no-repeat;
+}
+
+.card .slide{
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.card .slide p {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* destaca a palavra na imagem */
+  background: none; /* remove fundo tipo botão */
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+  }
+  
+
+
+
+.card .slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 0;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+}
+
+.seta.esquerda {
+  left: 10px;
+}
+
+.seta.direita {
+  right: 10px;
+}
+
+
+/* Produtos */
+.produtos {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.texto-introdutorio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.texto-introdutorio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+
+.produto-card {
+  width: 200px;
+  padding: 10px;
+  
+  border-radius: 12px;
+  text-align: center;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.produto-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* Newsletter */
+/* Newsletter */
+.newsletter {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .newsletter h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter-form input[type="email"] {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .newsletter-form button {
+    padding: 12px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #444;
+  }
+
+
+
+
+/* Footer base */
+.footer {
+    background-color: #f1fa6e;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Grid do conteúdo */
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Seções internas */
+  .footer-container > div {
+    flex: 1 1 250px;
+  }
+  
+  /* Títulos */
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #111;
+  }
+  
+  /* Redes sociais */
+  .footer-social .icons a {
+    font-size: 20px;
+    margin-right: 12px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-social .icons a:hover {
+    color: #e91e63;
+  }
+  
+  /* Links */
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #e91e63;
+  }
+  
+  /* Créditos */
+  .footer-credits p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
+  
+
+  /* Ajustes responsivos diretamente na home */
+  @media screen and (max-width: 768px) {
+    .carrossel-categorias {
+      height: 60vh;
+    }
+
+    .card .slide p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .texto-introdutorio h2 {
+      font-size: 1.8rem;
+    }
+
+    .texto-introdutorio p {
+      font-size: 1rem;
+    }
+
+    .produto-card {
+      width: 45%;
+      margin: 10px auto;
+    }
+
+    .produtos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .video-respiro {
+      height: auto;
+    }
+
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+      width: 100%;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-container > div {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* Responsividade geral */
+@media screen and (max-width: 1024px) {
+  .carrossel-categorias {
+    height: 60vh;
+  }
+
+  .card .slide p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Categorias */
+  .carrossel-categorias {
+    height: 50vh;
+  }
+
+  .card .slide p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .seta {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Produtos */
+  .produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .produto-card {
+    width: 45%;
+    padding: 8px;
+    margin: 8px;
+  }
+
+  .texto-introdutorio h2 {
+    font-size: 2rem;
+  }
+
+  .texto-introdutorio p {
+    font-size: 1rem;
+  }
+
+  /* Vídeo */
+  .video-respiro {
+    height: 250px;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container > div {
+    flex: 1 1 100%;
+  }
+
+  .footer-social .icons a {
+    margin-right: 16px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .produto-card {
+    width: 90%;
+  }
+
+  .card .slide p {
+    font-size: 1rem;
+  }
+
+  .texto-introdutorio h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-introdutorio p {
+    font-size: 0.9rem;
+  }
+}
+
