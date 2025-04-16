@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- CSS Local e CDN -->
+  <link rel="stylesheet" href="css/produto.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Menu dropdown -->
+  <div class="navbar">
+    <a href="/index.html" class="botao-home">
+        <img src="/imagens/icone.png" alt="Início">
+    </a>
+    <div class="dropdowns-container">
+        <div class="dropdown">
+            <button>Produtos</button>
+            <div class="dropdown-content">
+                <a href="/html/produtos.html?categoria=roupa">Roupa</a>
+                <a href="/html/produtos.html?categoria=calçado">Sapato</a>
+                <a href="/html/produtos.html?categoria=bolsa">Bolsa</a>
+                <a href="/html/produtos.html?categoria=brinco">Jóia</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Coleção</button>
+            <div class="dropdown-content">
+                <a href="/html/produtos.html?colecao=casual">Casual</a>
+                <a href="/html/produtos.html?colecao=corporativo">Corporativo</a>
+                <a href="/html/produtos.html?colecao=praia">Praia</a>
+                <a href="/html/produtos.html?colecao=campo">Campo</a>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    
+    <a href="/html/carrinho.html" class="botao-carrinho"><i class="fas fa-shopping-cart"></i></a>
+      
+</div>
+
+  <!-- Carrossel de Categorias -->
+  <section class="categorias">
+    <div class="carrossel-categorias">
+      <button class="seta esquerda">&#10094;</button>
+      <div class="slides">
+        <a href="html/produtos.html?colecao=casual" class="card">
+          <div class="slide ativo" style="background-image: url('imagens/cute-young-girl-with-dark-wavy-hairstyle-bright-makeup-silk-dress-black-jacket-holding-sunglasses-hands-looking-away-against-beige-building-wall.jpg')">
+            <p>Casual</p>
+          </div>
+        </a>
+        <a href="html/produtos.html?colecao=corporativo" class="card">
+          <div class="slide" style="background-image: url('imagens/portrait-rich-woman-outdoors-with-stylish-dress-sunglasses.jpg')">
+            <p>Corporativo</p>
+          </div>
+        </a>
+        <a href="html/produtos.html?colecao=praia" class="card">
+          <div class="slide" style="background-image: url('imagens/1281.jpg')">
+            <p>Praia</p>
+          </div>
+        </a>
+        <a href="html/produtos.html?colecao=campo" class="card">
+          <div class="slide" style="background-image: url('imagens/back-view-woman-holding-flowers-bouquet.jpg')">
+            <p>Campo</p>
+          </div>
+        </a>
+      </div>
+      <button class="seta direita">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Script do carrossel -->
+  <script src="js/script.js" defer></script>
+
+  <!-- Seção de produtos -->
+  <section class="produtos">
+    <div class="texto-introdutorio">
+      <h2>Mood do Dia</h2>
+      <p>Escolha o que combina com você e viva o seu estilo todos os dias.</p>
+    </div>
+    <div class="produtos-container" id="produtos"></div>
+
+    <!-- Scripts de funcionalidades -->
+    <script src="js/produto.js" defer></script>
+    <script src="js/produtosHome.js" defer></script>
+    <script src="js/adicionaProduto.js" defer></script>
+    <script src="js/filtroProduto.js" defer></script>
+  </section>
+
+  <!-- Seção de vídeo -->
+  <section class="video-respiro">
+    <div class="video">
+      <video autoplay loop muted playsinline>
+        <source src="imagens/7679834-uhd_2160_4096_25fps.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h2>Assine nossa newsletter</h2>
+      <p>Receba novidades, descontos e muito mais diretamente no seu e-mail.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Seu e-mail" required>
+        <button type="submit">Inscrever</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-social">
+        <h4>Nos siga</h4>
+        <div class="icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Links úteis</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-credits">
+        <h4>Design por</h4>
+        <p>Laura Conradi Studio</p>
+        <a href="https://br.freepik.com/">Freepik</a><br>
+        <a href="https://br.pinterest.com/">Pinterest</a>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

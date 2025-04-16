@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento via Pix</title>
+  <link rel="stylesheet" href="/css/pix.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>Pagamento via Pix</h1>
+
+    <div class="pix-box">
+      <div class="pix-info">
+        <p>Use o QR Code abaixo para realizar o pagamento:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=chavepixexemplo@pix.com.br" alt="QR Code Pix">
+        <p class="chave">Chave Pix: <strong>chavepixexemplo@pix.com.br</strong></p>
+      </div>
+
+      <div class="tempo">
+        <p>Tempo restante para pagamento:</p>
+        <div class="timer" id="timer">01:00</div>
+        <p class="status" id="status"></p>
+      </div>
+    </div>
+
+    <button onclick="window.location.href='concluido.html'">Já paguei</button>
+  </div>
+
+  <script>
+    let tempo = 60;
+    const timer = document.getElementById("timer");
+    const status = document.getElementById("status");
+
+    const intervalo = setInterval(() => {
+      tempo--;
+      const minutos = String(Math.floor(tempo / 60)).padStart(2, '0');
+      const segundos = String(tempo % 60).padStart(2, '0');
+      timer.textContent = `${minutos}:${segundos}`;
+
+      if (tempo <= 0) {
+        clearInterval(intervalo);
+        status.textContent = "Tempo esgotado. Por favor, gere um novo Pix.";
+        status.style.color = "red";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
