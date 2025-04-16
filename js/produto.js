@@ -5,7 +5,7 @@ const produtos = [
       id: 1,
       nome: "Conjunto Clássico Creme",
       preco: 130.99,
-      imagem: "/imagens/conjuntoCreme.jpg",
+      imagem: "imagens/conjuntoCreme.jpg",
       categoria: "roupa",
       colecao: "casual"
     },
@@ -13,7 +13,7 @@ const produtos = [
       id: 2,
       nome: "T-shirt Solta Verde",
       preco: 89.90,
-      imagem: "/imagens/tshirtVerde.jpg",
+      imagem: "imagens/tshirtVerde.jpg",
       categoria: "roupa",
       colecao: "casual"
     },
@@ -21,7 +21,7 @@ const produtos = [
       id: 3,
       nome: "Calça Branca Linho",
       preco: 160.90,
-      imagem: "/imagens/calcaLinho.jpg",
+      imagem: "imagens/calcaLinho.jpg",
       categoria: "roupa",
       colecao: "praia"
     },
@@ -29,7 +29,7 @@ const produtos = [
       id: 4,
       nome: "Macacão Elegante",
       preco: 180.90,
-      imagem: "/imagens/macacaElegante.jpg",
+      imagem: "imagens/macacaElegante.jpg",
       categoria: "roupa",
       colecao: "campo"
     },
@@ -37,7 +37,7 @@ const produtos = [
       id: 5,
       nome: "Calça Branca Algodão",
       preco: 150.99,
-      imagem: "/imagens/calcaAlgodao.jpg",
+      imagem: "imagens/calcaAlgodao.jpg",
       categoria: "roupa",
       colecao: "corporativo"
     },
