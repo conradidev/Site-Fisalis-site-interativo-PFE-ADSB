@@ -5,6 +5,7 @@ const container = document.getElementById("produtos");
 const produtosLimitados = produtos.slice(0, 20);
 
 // Função que redireciona para a página de produtos filtrando por categoria
+//mudança na maneira de importar as paginas
 function verSimilares(categoria) {
   window.location.href = `produtos.html?categoria=${categoria}`;
 }
